@@ -1,8 +1,11 @@
 package fr.esgi.todo.service;
 
+import fr.esgi.todo.business.Task;
+
 import java.util.ArrayList;
 
 public interface TaskService {
+    public ArrayList<Task> getTasks();
 
     public String showTasks();
 

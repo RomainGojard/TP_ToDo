@@ -9,6 +9,10 @@ public class TaskServiceImpl implements TaskService {
 
     private static ArrayList<Task> tasks = new ArrayList<>();
 
+    public TaskServiceImpl() {
+        tasks.clear();
+    }
+
     @Override
     public String showTasks() {
         String show = "";
@@ -46,5 +50,9 @@ public class TaskServiceImpl implements TaskService {
             }
         }
         return "Pas de tâche trouvée pour l'id : %s".formatted(id); // No task found with the specified id
+    }
+
+    public ArrayList<Task> getTasks() {
+        return tasks;
     }
 }

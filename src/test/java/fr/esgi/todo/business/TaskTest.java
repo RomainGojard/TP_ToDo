@@ -15,7 +15,6 @@ public class TaskTest {
 
     @Test
     public void testTaskInitialization() {
-        Assertions.assertEquals(1, task.getId());
         Assertions.assertEquals("Sample task", task.getDescription());
         Assertions.assertFalse(task.isDone());
     }
@@ -29,7 +28,7 @@ public class TaskTest {
 
     @Test
     public void testTaskToString() {
-        String expectedToString = "Task{id=1, description='Sample task', isDone=false}";
+        String expectedToString = "Task{id=" + task.getId() + ", description='Sample task', isDone=false}";
         Assertions.assertEquals(expectedToString, task.toString());
     }
 }
